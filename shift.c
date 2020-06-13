@@ -13,14 +13,14 @@ int main(void) {
 
     f1 = fopen("FILE1.txt", "r");
     f2 = fopen("FILE2.txt", "w");
-    //fscanf(f1, "%[^\n]s", s);
+    fscanf(f1, "%[^\n]s", s);
 
     char a;
     for (i = 0; i < strlen(s); i++) {
         a = s[i];
         //printf("%c", a);
 
-        //if (a >= 'a' && a <= 'z') {
+        if (a >= 'a' && a <= 'z') {
             // lower case
             a = (a - 'a' + 2) % 26 + 'a';
             // printf("%c", a);
@@ -42,7 +42,7 @@ int main(void) {
         putchar(ch);
         ch = getc(f1);
     }
-    printf("\nFILE2.txt\n");d
+    printf("\nFILE2.txt\n");
     ch = getc(f2);
     while (ch != EOF) {
         putchar(ch);
